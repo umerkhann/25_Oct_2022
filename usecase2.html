@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usecase 1</title>
+</head>
+
+<body>
+    <h2>JavaScript program to list the properties of a JavaScript object.</h2>
+
+    <!-- <p>The largest number is:</p> -->
+
+    <p id="demo"></p>
+    <script>
+
+        function removeProperty(obj) {
+            const objProperty = Object.keys(obj);
+            return objProperty;
+        }
+
+        function deleteProperty(obj){
+            delete obj.rollno;
+            return Object.keys(obj);
+        }
+
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        document.getElementById("demo").innerHTML = "Before deleting property: (" + removeProperty(student) + ") After deleting property: (" + deleteProperty(student) + ")";
+
+    </script>
+
+</body>
+
+</html>
