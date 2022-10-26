@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usecase 4</title>
+</head>
+
+<body>
+    <h2>JavaScript function to remove a specific element from an array</h2>
+
+
+    <p id="demo"></p>
+    <script>
+        // Function to remove a specific element from an array
+
+        function remove_array_element(array, element) {
+            for (let i = 0; i < array.length; i++) {
+                if (i === 0 && array[i] === element)
+                    array.shift();
+                if (i === array.length - 1 && array[i] === element)
+                    array.pop();
+                if (array[i] === element)
+                    array.splice(i, 1);
+            }
+            return array;
+        }
+
+        let array1 = [2, 5, 9, 6]; 
+        // Calling the function
+        document.getElementById("demo").innerHTML =
+            "The old array is [" + array1 + "] \n The new array is: [" + remove_array_element(array1, 5) + "]\n";
+    </script>
+
+</body>
+
+</html>
