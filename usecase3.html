@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usecase 3</title>
+</head>
+
+<body>
+    <h2>JavaScript function to split a string and convert it into an array of words.</h2>
+
+
+    <p id="demo"></p>
+    <script>
+        // Function to convert string into an array
+
+        function stringToArr(string) {
+            let arr = [""];
+            let j = 0;
+            for (let i = 0; i < string.length; i++){
+                if(string[i] === ' '){
+                    j++;
+                    arr[j] = "";
+                }
+                    else
+                    arr[j] += string[i];
+            }
+            return arr;
+        }
+
+        
+        let string1 = "Hello World";
+        // Calling the function
+        document.getElementById("demo").innerHTML = "The array is [" + stringToArr(string1) + "]";
+        
+    </script>
+
+</body>
+
+</html>
